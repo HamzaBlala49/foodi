@@ -1,0 +1,741 @@
+:root{
+    --primary-color:#39db4a;
+    --secondary-color: #c1f1c6;
+    --dark-color:#1e1e1e;
+    --yellow-color:#ffe605;
+    --lightRed-color:#ff6f6f;
+    --bg-body:#fbfbfb
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-body);
+}
+main{
+    margin: 0 100px;
+}
+::selection{
+    background-color: var(--primary-color);
+    color: white;
+
+}
+
+main > nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+}
+main > nav > ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+main > nav > ul > li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+}
+main > nav > ul > li > a{
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 16px;
+    font-weight: 700;
+} 
+
+/* main > nav > ul > li:hover > a {
+    
+} */
+ul > li > .active{
+    color: var(--primary-color);
+}
+ul > li > i{
+    color: var(--primary-color);
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.nav-search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-search > i {
+    font-size: 17px;
+}
+.bag{
+    position: relative;
+}
+.bag > span:first-child{
+    font-size: 20px;
+}
+.bag > span:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: -6px;
+    top: 2px;
+    font-size: 10px;
+    background-color: var(--primary-color);
+    width: 15px;
+    height: 15px;
+    color: white;
+    border-radius: 50%;
+}
+
+.nav-search > button{
+    color: white;
+    background-color: var(--primary-color);
+    border: 0;
+    padding:10px 20px;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+.heiro{
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    padding-top: 60px;
+    margin-bottom: 320px;
+}
+
+.heiro > div:first-child{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 70px ;
+}
+
+.heiro > div:first-child header{
+    font-size: 50px;
+    font-weight: 700;
+    /* width: 370px; */
+    margin: 50px 0 30px 0 ;
+}
+.heiro > div:first-child header >span{
+    color: var(--primary-color);
+
+}
+
+.heiro > div:first-child > p{
+    color:rgb(41, 41, 41);
+    line-height: 1.4;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.heiro > div:first-child > div{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.heiro > div:first-child > div > a:first-child{
+    color: white;
+    background-color: var(--primary-color);
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 30px;
+    width: 200px;
+    text-align: center;
+    /* flex-grow: 3; */
+}
+
+.heiro > div:first-child > div > span{
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.heiro > div:first-child > div > a:last-child{
+    color: var(--dark-color);
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 3px #e6e6e6;
+}
+
+.heiro > div:last-child{
+    width:50%;
+    position: relative;
+    height: auto ;
+}
+
+.heiro > div:last-child::before{
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 64px;
+    width: 435px;
+    height: 440px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+
+.heiro > div:last-child::after{
+    content: "";
+    position: absolute;
+    top: -39px;
+    left: 38px;
+    width: 450px;
+    height: 497px;
+    background-image: url(../images/Intersect.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.heiro > div:last-child > .comment{
+    position: absolute;
+    top: 60px;
+    left: 8px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px 40px 0px ;
+    width: fit-content;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: rgba(196, 196, 196, 0.677) -7px 3px 10px 0px;
+    z-index: 1000;
+    color: var(--lightRed-color);
+}
+
+
+.heiro > div:last-child .info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -154px;
+    left: 36px;
+    gap: 50px;
+    z-index: 10000;
+}
+
+.heiro > div:last-child .info > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: rgba(196, 196, 196, 0.677) 0px 5px 10px 0px;
+
+}
+
+.heiro > div:last-child .info > div > img{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+}
+.heiro > div:last-child .info > div > div > h6{
+    font-size: 17px;
+    color: #272727;
+}
+.heiro > div:last-child .info > div > div > p:first-of-type{
+    font-size: 10px;
+    color: #6e6e6e;
+    margin: 4px 0;
+}
+.stars-color{
+    color: var(--yellow-color);
+}
+
+
+
+.heiro > div:last-child .info > div > div > p:last-of-type{
+    font-size: 17px;
+    font-weight: 600;
+    color: #6e6e6e;
+}
+
+.heiro > div:last-child .info > div > div > p:last-of-type > span{
+    color: var(--lightRed-color);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.c-v{
+    margin-bottom: 50px;
+}
+.c-v > h5{
+    text-align: center;
+    color: var(--lightRed-color);
+    letter-spacing: 3px;
+}
+.c-v > header{
+    margin-top: 5px;
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--dark-color);
+    text-align: center;
+}
+.c-v > section{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    /* flex-wrap: wrap; */
+}
+.c-v > section > div{
+    
+    box-shadow: rgba(196, 196, 196, 0.677) 0px 3px 10px 0px;
+    background-color: white;
+    padding: 30px 0 ;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+
+    width: calc(100% / 4);
+}
+.c-v > section > div > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color:var(--secondary-color);
+}
+.c-v > section > div > div > img{
+    width: 100px;
+    height: 100px;
+    object-fit: fill;
+}
+
+.c-v > section > div > span{
+    color: #6e6e6e;
+}
+
+.s-d{
+    margin: 150px 0 30px 0;
+    position: relative;
+}
+
+.s-d > h5{ 
+    color: var(--lightRed-color);
+}
+
+.s-d > header{
+    margin-top: 5px;
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--dark-color);
+    width: 500px;
+}
+.s-d > .arrows{
+    position: absolute;
+    right: 0;
+    top: 95px;
+}
+
+.s-d > .arrows > button{
+   font-size:18px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 0;
+    font-weight: 700;
+}
+
+.s-d > .arrows > button:first-child{
+    margin-right: 15px;
+    background-color: #e6e6e6 ;
+    color: var(--dark-color);
+}
+
+.s-d > .arrows > button:last-child{
+    background-color: var(--primary-color) ;
+    color: white;
+}
+
+.s-d > section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 65px;
+}
+.s-d > section > div {
+    position: relative;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: rgba(196, 196, 196, 0.677) 0px 3px 10px 0px;
+    width: calc(100% / 3);
+}
+.s-d > section > div > div:first-child{
+    position: absolute;
+    top: -10px;
+    right: 0; 
+    background-color: var(--primary-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 0 20px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+
+}
+.s-d > section > div > img{
+    width: 250px;
+    height: 250px;
+    margin:0 50px;
+}
+
+.s-d > section > div > header{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.s-d > section > div > p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #6e6e6e;
+}
+
+.s-d > section > div > div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.s-d > section > div > div > p:first-child{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.s-d > section > div > div > p:first-child > span{
+    font-size: 20px;
+    color: var(--lightRed-color);
+}
+
+
+
+.s-d > section > div > div > p:last-child{
+    font-weight: 600;
+}
+
+.s-d > section > div > div > p:last-child > span{
+    margin-right: 10px;
+    color: var(--yellow-color);
+}
+
+.like{
+    color: var(--lightRed-color);
+}
+
+
+.testimonials{
+    display: flex;
+    /* margin-bottom: 200px; */
+}
+
+.testimonials > div:first-child{
+    position: relative;
+    width: 50%;
+}
+
+
+.testimonials > div:first-child::before{
+    content: "";
+    position: absolute;
+    top: 300px;
+    left: 0;
+    width: 450px;
+    height: 350px;
+    border-radius: 200px 200px 30px 30px;
+    background-color: var(--primary-color);
+
+}
+
+.testimonials > div:first-child::after{
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 20px;
+    width: 500px;
+    height: 605px;
+    z-index: 1000;
+    background-image: url("../images/pngwing2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.testimonials > div:first-child > span:first-child{
+    position: absolute;
+    top: 520px;
+    left: -10px;
+    font-size: 30px;
+    transform: rotate(-20deg);
+}
+
+.testimonials > div:first-child > span:last-of-type{
+    position: absolute;
+    top: 450px;
+    left:430px;
+    z-index: 10000;
+    font-size: 30px;
+    transform: rotate(20deg);
+}
+
+.testimonials > div:first-child .comment{
+    position: absolute;
+    top: 600px;
+    left: 350px;
+    background-color: rgb(255, 255, 255);
+    border-radius:   0px 40px 40px 40px ;
+    width: 170px;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: rgba(196, 196, 196, 0.677) -7px 3px 10px 0px;    z-index: 1000;
+    color: var(--dark-color);
+    z-index: 10000;
+
+    
+}
+.testimonials > div:last-child{
+    width: 50%;
+    padding-top: 100px;
+}
+
+.testimonials > div:last-child > h5{
+    color: var(--lightRed-color);
+    letter-spacing: 5px;
+
+}
+
+.testimonials > div:last-child > header{
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 700;
+    margin: 30px 0;
+}
+
+.testimonials > div:last-child > p{
+    font-size: 20px;
+    color: #6e6e6e;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.testimonials > div:last-child > .customer-feddback{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+
+}
+
+
+.testimonials > div:last-child > .customer-feddback > div >  img{
+    width: 70px;
+    height: 70px;
+    border-radius:50%;
+    border: 5px solid white;
+}
+
+.testimonials > div:last-child > .customer-feddback > div >  img:nth-child(2){
+    margin-left: -30px;
+    
+}
+.testimonials > div:last-child > .customer-feddback > div >  img:last-child{
+    margin-left: -30px;
+    
+}
+
+.testimonials > div:last-child > .customer-feddback > div:last-child > header{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.testimonials > div:last-child > .customer-feddback > div:last-child > p{
+    color: #272727;
+}
+.testimonials > div:last-child > .customer-feddback > div:last-child > p> span:first-child{
+    color: #ffe605;
+}
+
+.testimonials > div:last-child > .customer-feddback > div:last-child > p> span:last-child{
+    color: #6e6e6e;
+}
+
+.o-s{
+    display: flex;
+    align-items: center;
+    margin-top: 170px;
+    gap: 100px;
+}
+
+.o-s > div{
+    width: 50%;
+}
+.o-s div:first-child h5{
+    color: var(--lightRed-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    
+}
+
+.o-s > div:first-child > header{
+    font-size: 55px;
+    font-weight: bold;
+    color: var(--dark-color);
+    margin: 30px 0;
+}
+
+.o-s > div:first-child > p{
+    font-size: 20px;
+    font-weight: 600;
+    color: #6e6e6e;
+    line-height: 1.5;
+    margin-bottom: 40px;
+
+}
+
+.o-s > div:first-child > button{
+    background-color: var(--primary-color);
+    border: 0;
+    outline: 0;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 20px 50px;
+    border-radius: 40px;
+}
+
+.o-s div:last-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    /* margin-top: 50px; */
+    padding-top: 10px;
+
+}
+
+.o-s > div:last-child > div{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(196, 196, 196, 0.677) 0px 3px 10px 0px;
+}
+
+.o-s > div:last-child > div > header{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.o-s > div:last-child > div > p{
+    font-size: 16px;
+    font-weight: 600;
+    color:#6e6e6e;
+}
+
+footer{
+    margin-top: 180px;
+}
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 160px;
+}
+
+.footer-nav > div {
+    width: calc(100%/4);
+}
+
+.footer-nav > div:first-child p{
+    margin-top: 30px;
+    font-weight: 600;
+    color: #6e6e6e;
+
+}
+
+.footer-nav > div > ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    flex-direction: column;
+    margin-top: 15px;
+    padding-top: 20px;
+}
+
+.footer-nav > div > ul > li > a {
+    text-decoration: none;
+    color: #6e6e6e;
+    font-weight: 600;
+}
+
+.footer-nav > div > ul > li > a:hover{
+    color: var(--primary-color);
+}
+
+footer > div:last-child{
+    display: flex;
+    align-items: center;
+    margin: 100px 0 50px 0;
+    /* justify-content: space-between; */
+}
+
+footer > div:last-child ul{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+footer > div:last-child > ul > li > a {
+    background-color: var(--secondary-color);
+    width: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    color:#2f2f2f;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer > div:last-child > ul > li:first-child > a{
+    background-color: var(--primary-color);
+    color: white
+}
+
+
+footer > div:last-child > p{
+    margin-left: 200px;
+    color: #6e6e6e;
+    font-weight: 600;
+
+}
