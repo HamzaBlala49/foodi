@@ -160,14 +160,14 @@
             <h5>SPECIAL DISHES</h5>
             <header>Standout Dishes Form Our Menu</header>
             <div class="arrows">
-                <button>
+                <button id="btn-left">
                     <span class="fa-solid fa-chevron-left"></span>
                 </button>
-                <button>
+                <button id="btn-right">
                     <span class="fa-solid fa-chevron-right"></span>
                 </button>
             </div>
-            <section>
+            <section id="inner">
                 <div>
                     <div>
                         <span class="far fa-heart like"></span>
@@ -209,6 +209,36 @@
                     <p>Description of the item</p>
                     <div>
                         <p><span>$</span>23.00</p>
+                        <p><span class="fas fa-star"></span>4.5</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div>
+                        <span class="far fa-heart"></span>
+                    </div>
+                    
+                    <img src="./assets/images/image 13.png" alt="egg salad">
+                    <header>Egg  vegi salad</header>
+                    <p>Description of the item</p>
+                    <div>
+                        <p><span>$</span>10.00</p>
+                        <p><span class="fas fa-star"></span>4.5</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div>
+                        <span class="far fa-heart"></span>
+                    </div>
+                    
+                    <img src="./assets/images/image 14.png" alt="egg salad">
+                    <header>Egg  vegi salad</header>
+                    <p>Description of the item</p>
+                    <div>
+                        <p><span>$</span>15.00</p>
                         <p><span class="fas fa-star"></span>4.5</p>
                     </div>
 
@@ -405,6 +435,22 @@
 
 
 
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/swipper.js"></script>
+    <!-- <script src="./assets/js/main.js"></script> -->
+    <script>
+        let leftBtn = document.getElementById("btn-left");
+        let rightBtn = document.getElementById("btn-right");
+        let inner = document.getElementById("inner");
+        let cards = document.querySelectorAll("#inner > div");
+
+        rightBtn.onclick = function (){
+            translate(inner,cards,3,this.id);
+        }
+
+        leftBtn.onclick = function (){
+            translate(inner,cards,3,this.id);
+        }
+        
+    </script>
 </body>
 </html>

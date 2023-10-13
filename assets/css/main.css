@@ -330,6 +330,8 @@ ul > li > i{
 .s-d{
     margin: 150px 0 30px 0;
     position: relative;
+    overflow: hidden;
+    padding: 10px 0;
 }
 
 .s-d > h5{ 
@@ -356,25 +358,30 @@ ul > li > i{
     border-radius: 50%;
     border: 0;
     font-weight: 700;
-}
-
-.s-d > .arrows > button:first-child{
-    margin-right: 15px;
+    cursor: pointer;
     background-color: #e6e6e6 ;
     color: var(--dark-color);
 }
 
-.s-d > .arrows > button:last-child{
+.s-d > .arrows > button:first-child{
+    margin-right: 15px;
+    
+}
+
+.s-d > .arrows > button:hover{
     background-color: var(--primary-color) ;
     color: white;
 }
 
 .s-d > section {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 30px;
     margin-top: 65px;
+    padding: 0 10px;
+    /* transform: translateX(0); */
+    transition: All .5s ease-in-out;
 }
 .s-d > section > div {
     position: relative;
@@ -399,9 +406,11 @@ ul > li > i{
 
 }
 .s-d > section > div > img{
-    width: 250px;
-    height: 250px;
-    margin:0 50px;
+    width: 220px;
+    height: 220px;
+    margin: 0px 50px;
+    border-radius: 50%;
+    /* object-fit: cover; */
 }
 
 .s-d > section > div > header{
@@ -676,6 +685,14 @@ footer{
     width: calc(100%/4);
 }
 
+.footer-nav > div > svg{
+    filter: grayscale(100%);
+}
+
+.footer-nav > div > svg:hover{
+    filter: grayscale(0%);
+}
+
 .footer-nav > div:first-child p{
     margin-top: 30px;
     font-weight: 600;
@@ -727,7 +744,7 @@ footer > div:last-child > ul > li > a {
     justify-content: center;
 }
 
-footer > div:last-child > ul > li:first-child > a{
+footer > div:last-child > ul > li:hover > a{
     background-color: var(--primary-color);
     color: white
 }
